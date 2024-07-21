@@ -1,3 +1,103 @@
-body{text-align:center}.container{padding:10px 0 0 50px}.list-horizontal{padding:0}.post{display:none}.post.active{display:block}.card-body{text-align:left}.lolzonon{height:70px;width:70px;padding-left:20px}.card img{width:100%;height:300px;-o-object-fit:cover;object-fit:cover}.row.post{align-items:center}.mats{color:#fff;font-style:oblique;font-size:40px;padding-left:100px}.navbar{padding:5px 30px 5px 30px;align-items:center;text-align:center;font-weight:bolder}.summary{align-items:center;text-align:center;padding-top:100px;background-image:url(https://i.postimg.cc/5tTfB6dV/pexels-polina-kovaleva-5827831.jpg);color:#fff;height:400px;align-content:center;font-style:oblique}.card{margin:auto;width:134%;border:none;padding:10px}.list-group-item{margin-bottom:40px}.list-group-item.active{display:none}@media(max-width: 767px){.card{margin:auto;width:80%;border:none;padding:10px}.card-body{text-align:center}.navbar{padding:5px 30px 5px 30px}.container{padding:30px 0 0 0}.list-group-item{margin-left:5px}}
+body {
+  text-align: center;
+}
 
-/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInN0eWxlLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxLQUFLLGlCQUFpQixDQUFDLFdBQVcscUJBQXFCLENBQUMsaUJBQWlCLFNBQVMsQ0FBQyxNQUFNLFlBQVksQ0FBQyxhQUFhLGFBQWEsQ0FBQyxXQUFXLGVBQWUsQ0FBQyxVQUFVLFdBQVcsQ0FBQyxVQUFVLENBQUMsaUJBQWlCLENBQUMsVUFBVSxVQUFVLENBQUMsWUFBWSxDQUFDLG1CQUFlLENBQWYsZ0JBQWdCLENBQUMsVUFBVSxrQkFBa0IsQ0FBQyxNQUFNLFVBQVUsQ0FBQyxrQkFBa0IsQ0FBQyxjQUFjLENBQUMsa0JBQWtCLENBQUMsUUFBUSx5QkFBeUIsQ0FBQyxrQkFBa0IsQ0FBQyxpQkFBaUIsQ0FBQyxrQkFBa0IsQ0FBQyxTQUFTLGtCQUFrQixDQUFDLGlCQUFpQixDQUFDLGlCQUFpQixDQUFDLHNGQUFzRixDQUFDLFVBQVUsQ0FBQyxZQUFZLENBQUMsb0JBQW9CLENBQUMsa0JBQWtCLENBQUMsTUFBTSxXQUFXLENBQUMsVUFBVSxDQUFDLFdBQVcsQ0FBQyxZQUFZLENBQUMsaUJBQWlCLGtCQUFrQixDQUFDLHdCQUF3QixZQUFZLENBQUMseUJBQXlCLE1BQU0sV0FBVyxDQUFDLFNBQVMsQ0FBQyxXQUFXLENBQUMsWUFBWSxDQUFDLFdBQVcsaUJBQWlCLENBQUMsUUFBUSx5QkFBeUIsQ0FBQyxXQUFXLGtCQUFrQixDQUFDLGlCQUFpQixlQUFlLENBQUMiLCJmaWxlIjoic3R5bGUuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiYm9keXt0ZXh0LWFsaWduOmNlbnRlcn0uY29udGFpbmVye3BhZGRpbmc6MTBweCAwIDAgNTBweH0ubGlzdC1ob3Jpem9udGFse3BhZGRpbmc6MH0ucG9zdHtkaXNwbGF5Om5vbmV9LnBvc3QuYWN0aXZle2Rpc3BsYXk6YmxvY2t9LmNhcmQtYm9keXt0ZXh0LWFsaWduOmxlZnR9LmxvbHpvbm9ue2hlaWdodDo3MHB4O3dpZHRoOjcwcHg7cGFkZGluZy1sZWZ0OjIwcHh9LmNhcmQgaW1ne3dpZHRoOjEwMCU7aGVpZ2h0OjMwMHB4O29iamVjdC1maXQ6Y292ZXJ9LnJvdy5wb3N0e2FsaWduLWl0ZW1zOmNlbnRlcn0ubWF0c3tjb2xvcjojZmZmO2ZvbnQtc3R5bGU6b2JsaXF1ZTtmb250LXNpemU6NDBweDtwYWRkaW5nLWxlZnQ6MTAwcHh9Lm5hdmJhcntwYWRkaW5nOjVweCAzMHB4IDVweCAzMHB4O2FsaWduLWl0ZW1zOmNlbnRlcjt0ZXh0LWFsaWduOmNlbnRlcjtmb250LXdlaWdodDpib2xkZXJ9LnN1bW1hcnl7YWxpZ24taXRlbXM6Y2VudGVyO3RleHQtYWxpZ246Y2VudGVyO3BhZGRpbmctdG9wOjEwMHB4O2JhY2tncm91bmQtaW1hZ2U6dXJsKGh0dHBzOi8vaS5wb3N0aW1nLmNjLzV0VGZCNmRWL3BleGVscy1wb2xpbmEta292YWxldmEtNTgyNzgzMS5qcGcpO2NvbG9yOiNmZmY7aGVpZ2h0OjQwMHB4O2FsaWduLWNvbnRlbnQ6Y2VudGVyO2ZvbnQtc3R5bGU6b2JsaXF1ZX0uY2FyZHttYXJnaW46YXV0bzt3aWR0aDoxMzQlO2JvcmRlcjpub25lO3BhZGRpbmc6MTBweH0ubGlzdC1ncm91cC1pdGVte21hcmdpbi1ib3R0b206NDBweH0ubGlzdC1ncm91cC1pdGVtLmFjdGl2ZXtkaXNwbGF5Om5vbmV9QG1lZGlhKG1heC13aWR0aDogNzY3cHgpey5jYXJke21hcmdpbjphdXRvO3dpZHRoOjgwJTtib3JkZXI6bm9uZTtwYWRkaW5nOjEwcHh9LmNhcmQtYm9keXt0ZXh0LWFsaWduOmNlbnRlcn0ubmF2YmFye3BhZGRpbmc6NXB4IDMwcHggNXB4IDMwcHh9LmNvbnRhaW5lcntwYWRkaW5nOjMwcHggMCAwIDB9Lmxpc3QtZ3JvdXAtaXRlbXttYXJnaW4tbGVmdDo1cHh9fVxuIl19 */
+.container {
+  padding: 10px 0 0 50px;
+}
+
+.list-horizontal {
+  padding: 0;
+}
+
+.post {
+  display: none;
+}
+.post.active {
+  display: block;
+}
+
+.card-body {
+  text-align: left;
+}
+
+.lolzonon {
+  height: 70px;
+  width: 70px;
+  padding-left: 20px;
+}
+
+.card img {
+  width: 100%;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.row.post {
+  align-items: center;
+}
+
+.mats {
+  color: white;
+  font-style: oblique;
+  font-size: 40px;
+  padding-left: 100px;
+}
+
+.navbar {
+  padding: 5px 30px 5px 30px;
+  align-items: center;
+  text-align: center;
+  font-weight: bolder;
+}
+
+.summary {
+  align-items: center;
+  text-align: center;
+  padding-top: 100px;
+  background-image: url(https://i.postimg.cc/5tTfB6dV/pexels-polina-kovaleva-5827831.jpg);
+  color: white;
+  height: 400px;
+  align-content: center;
+  font-style: oblique;
+}
+
+.card {
+  margin: auto;
+  width: 134%;
+  border: none;
+  padding: 10px;
+}
+
+.list-group-item {
+  margin-bottom: 40px;
+}
+
+.list-group-item.active {
+  display: none;
+}
+
+/*Mobile RWD*/
+@media (max-width: 767px) {
+  .card {
+    margin: auto;
+    width: 80%;
+    border: none;
+    padding: 10px;
+  }
+  .card-body {
+    text-align: center;
+  }
+  .navbar {
+    padding: 5px 30px 5px 30px;
+  }
+  .container {
+    padding: 30px 0 0 0;
+  }
+  .list-group-item {
+    margin-left: 5px;
+  }
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL3Nhc3Mvc3R5bGUuc2NzcyIsInN0eWxlLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFDQTtFQUNJLGtCQUFBO0FDQUo7O0FESUE7RUFDSSxzQkFBQTtBQ0RKOztBREdBO0VBQ0ksVUFBQTtBQ0FKOztBREVBO0VBQ0ksYUFBQTtBQ0NKO0FEQUk7RUFDRSxjQUFBO0FDRU47O0FERUU7RUFDRSxnQkFBQTtBQ0NKOztBRENJO0VBQ0ksWUFBQTtFQUNBLFdBQUE7RUFDQSxrQkFBQTtBQ0VSOztBREFJO0VBQ0ksV0FBQTtFQUNBLGFBQUE7RUFDQSxvQkFBQTtLQUFBLGlCQUFBO0FDR1I7O0FEQUk7RUFDSSxtQkFBQTtBQ0dSOztBRERBO0VBQ0ksWUFBQTtFQUNBLG1CQUFBO0VBQ0EsZUFBQTtFQUNBLG1CQUFBO0FDSUo7O0FEREk7RUFDSSwwQkFBQTtFQUNBLG1CQUFBO0VBQ0Esa0JBQUE7RUFDQSxtQkFBQTtBQ0lSOztBRERJO0VBQ0ksbUJBQUE7RUFDQSxrQkFBQTtFQUNBLGtCQUFBO0VBQ0EsdUZBQUE7RUFDQSxZQUFBO0VBQ0EsYUFBQTtFQUNBLHFCQUFBO0VBQ0EsbUJBQUE7QUNJUjs7QURGSTtFQUNJLFlBQUE7RUFDQSxXQUFBO0VBQ0EsWUFBQTtFQUNBLGFBQUE7QUNLUjs7QURITTtFQUNFLG1CQUFBO0FDTVI7O0FESkE7RUFDSSxhQUFBO0FDT0o7O0FESk0sYUFBQTtBQUVOO0VBQ0k7SUFDSSxZQUFBO0lBQ0EsVUFBQTtJQUNBLFlBQUE7SUFDQSxhQUFBO0VDTU47RURKRTtJQUNJLGtCQUFBO0VDTU47RURKRTtJQUNJLDBCQUFBO0VDTU47RURKRTtJQUNJLG1CQUFBO0VDTU47RURKRTtJQUNJLGdCQUFBO0VDTU47QUFDRiIsImZpbGUiOiJzdHlsZS5jc3MifQ== */
